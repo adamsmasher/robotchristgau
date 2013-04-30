@@ -42,6 +42,8 @@ def format_review(review_words):
 
 def main():
   corpus = open('reviews.dat').readlines()
+  band_names = open('artists.dat').readlines()
+  print generate_review(make_following(band_names))
   print generate_review(make_following(corpus))
 
 if __name__ == '__main__':
