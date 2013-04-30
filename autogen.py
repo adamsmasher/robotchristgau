@@ -33,10 +33,10 @@ def format_review(review_words):
       .replace('( ', '(') \
       .replace(' )', ')') \
       .replace(" 's", "'s") \
-      .replace(" 't", "'t") \
       .replace(" 'd", "'d") \
       .replace(" 'm", "'m") \
       .replace(" 'll", "'ll") \
+      .replace(" n't", "n't") \
       .replace(" ?", "?") \
       .replace(" !", "!")
 
