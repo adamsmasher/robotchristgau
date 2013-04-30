@@ -30,5 +30,5 @@ def format_review(review_words):
   return ' '.join(review_words)
 
 def main():
-  corpus = open('reviews').readlines()
+  corpus = open('reviews.dat').readlines()
   print generate_review(make_following(corpus))
