@@ -27,7 +27,18 @@ def generate_review(following_table):
   return format_review(review)
 
 def format_review(review_words):
-  return ' '.join(review_words)
+  return ' '.join(review_words) \
+      .replace(' ,', ',') \
+      .replace(' .', '.') \
+      .replace('( ', '(') \
+      .replace(' )', ')') \
+      .replace(" 's", "'s") \
+      .replace(" 't", "'t") \
+      .replace(" 'd", "'d") \
+      .replace(" 'm", "'m") \
+      .replace(" 'll", "'ll") \
+      .replace(" ?", "?") \
+      .replace(" !", "!")
 
 def main():
   corpus = open('reviews.dat').readlines()
